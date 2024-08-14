@@ -9,6 +9,12 @@ pipeline {
     }
 
     stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/Jhooomn/bidirectional-stream-comunication-servr.git'
+            }
+        }
+
         stage('Setup Go') {
             steps {
                 script {
